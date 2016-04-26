@@ -9,4 +9,4 @@ puts "width?"
 user_input[1] = gets.chomp.to_i
 puts "colours?"
 user_input[2] = gets.chomp.to_i
-puts price(user_input[0],user_input[1],user_input[2])
+puts price(user_input[0],user_input[1],user_input[2]).round(2)
