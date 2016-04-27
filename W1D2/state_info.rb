@@ -45,5 +45,5 @@ def find_state_for_city(city_name)
 end
 
 puts find_state_for_city("Los Angeles")
-puts calculate_tax("FL".to_sym, 200)
+puts calculate_tax("FL".to_sym, 214)
 puts describe_state("OR".to_sym)
