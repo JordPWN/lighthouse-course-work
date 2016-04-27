@@ -17,8 +17,9 @@ def recycle(pop)
 	@bottles += pop
 	@caps += pop
 	@pop = 0
-		bottle_return(@bottles)
-		cap_return(@caps)
+	bottle_return(@bottles)
+	cap_return(@caps)
+
 end
 
 def bottle_return(bottles)
