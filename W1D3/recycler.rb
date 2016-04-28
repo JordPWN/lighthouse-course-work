@@ -13,7 +13,7 @@ def buy_pop(dollars)
 	end
 end
 
-def recycle(pop)#COULD make tihs recursible, by moving while loop from buy_pop here, but requires more @variable usage
+def recycle(pop)#COULD make this recursive, by moving while loop from buy_pop here, but requires more @variable usage
 	@bottles += pop
 	@caps += pop
 	@pop = 0
@@ -41,6 +41,6 @@ def cap_return(caps)
 	@caps = caps
 end
 
-buy_pop(12)
+buy_pop(30)
 
 puts "Current pop: #{@pop}\n Pop purchased: #{@pop_purchased}\n Current Bottles: #{@bottles}\n Current Caps: #{@caps}\n Pop from Bottle Returns: #{@from_bottles}\n Pop from Cap Returns: #{@from_caps}"

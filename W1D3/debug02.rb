@@ -23,7 +23,7 @@ end
 def test_average(array=nil)
   print "avg of #{array.inspect}:"
   if array == nil
-  	return p nil.inspect
+  	p nil.inspect
   else
   	result = average(array)
   	p result

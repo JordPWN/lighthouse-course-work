@@ -1,5 +1,5 @@
 def sum(list)
-sum = 0
+	sum = 0
   list.each do |ele|
     sum += ele
   end
