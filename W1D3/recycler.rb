@@ -13,13 +13,12 @@ def buy_pop(dollars)
 	end
 end
 
-def recycle(pop)
+def recycle(pop)#COULD make tihs recursible, by moving while loop from buy_pop here, but requires more @variable usage
 	@bottles += pop
 	@caps += pop
 	@pop = 0
 	bottle_return(@bottles)
 	cap_return(@caps)
-
 end
 
 def bottle_return(bottles)
