@@ -26,7 +26,9 @@ end
   	FL: 1.02,
   	CA: 1.03,
   	NY: 1.04,
-  	MI: 1.05
+  	MI: 1.05,
+  	NY: 1.06,
+  	MY: 1.07
 }
 
 def calculate_tax(code, dollars)
