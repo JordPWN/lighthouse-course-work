@@ -13,7 +13,7 @@ class Contact
 
   #Redefine default to_s method for Contact.class to prettify it
   def to_s
-    "ID:#{self.id} Name: #{self.name} Email: #{self.email}"
+    "ID: #{self.id} Name: #{self.name} Email: #{self.email}"
   end
 
   #CLASS FUNCTIONS
@@ -21,7 +21,7 @@ class Contact
 
     #Returns an array containing all contacts
     def all
-      all = []
+      all = [] # Prefer map
       CSV.foreach("contacts.csv") do |row|
         all << Contact.new(row[0],row[1],row[2])#.new
       end
@@ -48,15 +48,12 @@ class Contact
     end
 
     #Search through name & email by name or email address
-    def search(term)
+    def search(term)#select
       read_file = self.all
-      hits = []
-      read_file.each do |contact|
-        if contact.name.include?(term) || contact.email.include?(term)
-          hits << contact
-        end
+      read_file.select do |contact|
+        contact.name.include?(term)
+        contact.email.include?(term)
       end
-      return hits
     end
 
   end#End of class functions

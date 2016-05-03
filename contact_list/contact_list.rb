@@ -35,4 +35,16 @@ class ContactList
   	puts Contact.search(argument1)
   end
 
+# begin 
+#   puts case ARGV[0]
+#     when 'new'
+#       Contact.create(ARGV[1], ARGV[2])
+#     end
+#   else
+#     puts "Unknown command"
+#   end
+#   rescue MyErrorType(ex)
+#     puts "Error"
+# end
+
 end
