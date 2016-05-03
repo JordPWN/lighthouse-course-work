@@ -2,8 +2,6 @@ require 'csv'
 
 class Contact
 
-  @@all = []
-
   attr_reader :id
   attr_accessor :name, :email
   
@@ -23,14 +21,20 @@ class Contact
 
     #Returns an array containing all contacts
     def all
+      all = []
       CSV.foreach("contacts.csv") do |row|
-        @@all << Contact.new(row[0],row[1],row[2])#.new
+        all << Contact.new(row[0],row[1],row[2])#.new
       end
-      @@all
+      all
     end
 
     #Creates new contacts
     def create(name, email)
+      self.all.each do |arg|
+        if email == arg.email
+          return "This email address already exists!"
+        end
+      end
       new_contact = "\n" + [Contact.all.size+1, name, email].join(",")
       File.open("contacts.csv", "a"){|append| append.write(new_contact)}
       new_contact
